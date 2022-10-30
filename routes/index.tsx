@@ -1,9 +1,10 @@
 import { Head } from "$fresh/runtime.ts";
 import Counter from "../islands/Counter.tsx";
+import Footer from "../islands/Footer.tsx";
 
 export default function Home() {
   return (
-    <>
+    <div class="flex flex-col min-h-screen">
       <Head>
         <title>Fresh App</title>
       </Head>
@@ -19,6 +20,9 @@ export default function Home() {
         </p>
         <Counter start={3} />
       </div>
-    </>
+      <div className="p-4 mx-auto max-w-screen-md mt-auto w-full">
+        <Footer />
+      </div>
+    </div>
   );
 }
